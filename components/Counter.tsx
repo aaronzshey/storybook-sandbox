@@ -11,7 +11,6 @@ export function Counter() {
         padding: "0.6em 1.2em",
         fontSize: "1em",
         fontWeight: "500",
-        fontFamily: "Inter",
         backgroundColor: "1a1a1a",
         cursor: "pointer",
         transition: "border-color 0.25s",

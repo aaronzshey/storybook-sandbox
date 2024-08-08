@@ -1,18 +1,31 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { ReadTheDocs } from "../ReadTheDocs";
 
+/*
+* The title attribute decides where the story is placed in the sidebar.
+* Foo/BarComponent will place the BarComponent under the "Foo" collapsible group
+*/
+
 const meta = {
-    title: "Example/ReadTheDocs",
+    title: "Components/ReadTheDocs",
     tags: ["autodocs"],
     component: ReadTheDocs,
+    parameters: {
+        componentSubtitle: "A component with two color options that displays text."
+    },
 } satisfies Meta<typeof ReadTheDocs>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+//type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
-    args: {
-        children: "Hello world",
-        colorId: 1,
-    },
+/**
+ * Two colors are supported.
+ */
+export const Primary = {
+    render: () => (
+        <>
+            <ReadTheDocs colorId={1}>colorId = 1</ReadTheDocs>
+            <ReadTheDocs colorId={2}>colorId = 2</ReadTheDocs>
+        </>
+    )
 };

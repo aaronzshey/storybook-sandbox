@@ -13,6 +13,14 @@ const meta = {
     parameters: {
         componentSubtitle: "A component with two color options that displays text."
     },
+    argTypes: {
+        colorId: {
+            control: {
+                type: "select",
+            },
+            options: [1, 2],
+        }
+    }
 } satisfies Meta<typeof ReadTheDocs>;
 
 export default meta;
